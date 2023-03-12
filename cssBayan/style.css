@@ -6,13 +6,16 @@
 
 body {
   display: flex;
-  justify-content: center;
-  min-height: 100vh;
+  justify-content: center;  
 }
 
 .wrapper {
   max-width: 55rem;
   padding: 1.5rem;
+}
+
+.container {
+  padding: 2rem;
 }
 
 .title {
@@ -32,6 +35,12 @@ label {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+img {
+  border-radius: 0.5rem;
+  width: 100%;
 }
 
 label:hover {
@@ -41,7 +50,7 @@ label:hover {
 
 .icon {
   position: relative;
-  visibility: hidden;
+  display: block;
 }
 
 .bayan:hover .icon {
@@ -52,13 +61,17 @@ input:checked~label .icon i:before {
   content: '\f068';
 }
 
+label .icon i:before:active {
+  content: '\f068';
+}
+
 .content {
   max-height: 0px;
   overflow: hidden;
 }
 
 input:checked~.content {
-  max-height: 100vh;
+  max-height: 100vh; 
 }
 
 label:hover~.content {
@@ -66,6 +79,6 @@ label:hover~.content {
   transition: all 1s;
 }
 
-input[type="checkbox"] {
+input[type="radio"] {
   display: none;
 }
