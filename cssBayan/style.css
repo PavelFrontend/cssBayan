@@ -1,0 +1,69 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.bayan:hover .icon {
+  visibility: visible;
+}
+
+body{
+  display: flex;
+
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper{
+  max-width: 600px;
+  padding:  20px;
+}
+
+
+    label
+   {
+    background: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    
+  }
+   label:hover{
+    background: #006fe6;
+  }
+ 
+ 
+
+   .icon{
+    position: relative;
+   visibility: hidden;
+  }
+   input:checked ~ label .icon i:before
+  {
+    content: '\f068';
+  }
+  
+  
+    .content
+   {
+    max-height: 0px;
+    overflow: hidden;
+    
+  }
+   input:checked ~ .content
+  {
+    max-height: 100vh;
+  }
+
+  label:hover ~ .content {
+    max-height: 100vh;
+  }
+  
+  input[type="checkbox"]{
+    display: none;
+  }
