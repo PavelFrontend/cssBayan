@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  max-width: 25rem;
+  max-width: 55rem;
   padding: 1.5rem;
 }
 
@@ -63,7 +63,7 @@ input:checked~.content {
 
 label:hover~.content {
   max-height: 100vh;
-  transition: all 2s;
+  transition: all 1s;
 }
 
 input[type="checkbox"] {
