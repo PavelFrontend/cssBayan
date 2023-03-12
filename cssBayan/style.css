@@ -1,69 +1,71 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 25rem;
+  padding: 1.5rem;
+}
+
+.title {
+  padding: 2rem;
+  text-align: center;
+}
+
+.tab-title {
+  font-weight: 700;
+  color: #fff;
+}
+
+label {
+  background: #4800ff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+label:hover {
+  background: #6400e6;
+  transition: all 0.5s;
+}
+
+.icon {
+  position: relative;
+  visibility: hidden;
 }
 
 .bayan:hover .icon {
   visibility: visible;
 }
 
-body{
-  display: flex;
-
-  justify-content: center;
-  min-height: 100vh;
+input:checked~label .icon i:before {
+  content: '\f068';
 }
 
-.wrapper{
-  max-width: 600px;
-  padding:  20px;
+.content {
+  max-height: 0px;
+  overflow: hidden;
 }
 
+input:checked~.content {
+  max-height: 100vh;
+}
 
-    label
-   {
-    background: #007bff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    
-  }
-   label:hover{
-    background: #006fe6;
-  }
- 
- 
+label:hover~.content {
+  max-height: 100vh;
+  transition: all 2s;
+}
 
-   .icon{
-    position: relative;
-   visibility: hidden;
-  }
-   input:checked ~ label .icon i:before
-  {
-    content: '\f068';
-  }
-  
-  
-    .content
-   {
-    max-height: 0px;
-    overflow: hidden;
-    
-  }
-   input:checked ~ .content
-  {
-    max-height: 100vh;
-  }
-
-  label:hover ~ .content {
-    max-height: 100vh;
-  }
-  
-  input[type="checkbox"]{
-    display: none;
-  }
+input[type="checkbox"] {
+  display: none;
+}
