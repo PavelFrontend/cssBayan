@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1.25rem;
+}
+
 body {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .wrapper {
@@ -43,19 +47,11 @@ img {
   width: 100%;
 }
 
-label:hover {
-  background: #6400e6;
-  transition: all 0.5s;
-}
-
 .icon {
   position: relative;
   display: block;
 }
 
-.bayan:hover .icon {
-  visibility: visible;
-}
 
 input:checked~label .icon i:before {
   content: '\f068';
@@ -71,14 +67,49 @@ label .icon i:before:active {
 }
 
 input:checked~.content {
-  max-height: 100vh; 
-}
-
-label:hover~.content {
   max-height: 100vh;
-  transition: all 1s;
 }
 
 input[type="radio"] {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 825px) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 0.5rem;
+  }
+}
+
+@media (hover: hover) {
+  label:hover~.content {
+    max-height: 100vh;
+    transition: all 1s;
+  }
+
+  img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }
+
+  label:hover {
+    background: #6400e6;
+    transition: all 0.5s;
+  }
+
+  .bayan:hover .icon {
+    visibility: visible;
+  }
 }
